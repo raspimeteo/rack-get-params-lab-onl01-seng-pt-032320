@@ -1,4 +1,3 @@
-require 'pry'
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -17,7 +16,6 @@ class Application
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
-    binding.pry
       if @@cart.size == 0
         resp.write "Your cart is empty"
       else
