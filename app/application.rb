@@ -24,7 +24,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item = req.params["q"]
+      item = req.params["item"]
       puts @@items
       puts "item = #{item}"
       if @@items.include?(item)
