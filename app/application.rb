@@ -19,7 +19,7 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-     item = req.param
+     item = req.params
     else
       resp.write "Path Not Found"
     end
