@@ -2,9 +2,10 @@ require 'pry'
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
+  @@cart = []
 
   def call(env)
-    @@cart = []
+    
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
